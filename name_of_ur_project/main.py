@@ -36,15 +36,11 @@ if __name__ == "__main__":
                 if event.key == pg.K_i:
                     TICK_RATE += 1
                     upd_ticks = pg.time.get_ticks()
-            if event.type == pg.MOUSEBUTTONDOWN:
-                if event.button == 1:
-                    for btn in btns:
-                        btn.coll([pg.mouse.get_pos()[0] - WIDTH + vx, pg.mouse.get_pos()[1]])
 
         # game Assets/UI/elements drawing
 
         # game environment updating
-        if 0 <= pg.time.get_ticks() - upd_ticks - (1000 / TICK_RATE) <= 75:
+        if 0 <= pg.time.get_ticks() - upd_ticks - (1000 / TICK_RATE):
             upd_ticks = pg.time.get_ticks()
             # calling for game environment to update
 
