@@ -39,7 +39,7 @@ l_press, r_press = False, False
 
 if __name__ == "__main__":
     # creating a pygame window
-    screen = pg.display.set_mode((WIDTH, HEIGHT), vsync=1)
+    screen = pg.display.set_mode(SIZE, vsync=1)
     clock = pg.time.Clock()
 
     # creating the game logic / environment sample
