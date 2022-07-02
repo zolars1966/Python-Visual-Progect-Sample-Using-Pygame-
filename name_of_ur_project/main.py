@@ -30,9 +30,10 @@ def right_click():
 
 # global references
 try:
-    WIDTH, HEIGHT = int(sys.argv[1]), int(sys.argv[2])
+    SIZE = WIDTH, HEIGHT = int(sys.argv[1]), int(sys.argv[2])
 except IndexError:
-    WIDTH, HEIGHT = 1280, 720
+    SIZE = WIDTH, HEIGHT = 1280, 720
+H_SIZE = H_WIDTH, H_HEIGHT = WIDTH / 2, HEIGHT / 2
 TICK_RATE = 5
 l_press, r_press = False, False
 
