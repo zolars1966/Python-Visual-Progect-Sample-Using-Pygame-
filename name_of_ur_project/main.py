@@ -35,6 +35,7 @@ except IndexError:
     SIZE = WIDTH, HEIGHT = 1280, 720
 H_SIZE = H_WIDTH, H_HEIGHT = WIDTH / 2, HEIGHT / 2
 TICK_RATE = 5
+FPS = 0 # of course, you can change this parameter however you want, but with FPS equal zero, your framerate will be unlimited
 l_press, r_press = False, False
 
 if __name__ == "__main__":
@@ -82,4 +83,4 @@ if __name__ == "__main__":
         pg.display.set_caption("$~NameOfUrProject ~fps: " + str(round(clock.get_fps(), 2)) + " ~tickrate: " + str(TICK_RATE))
 
         pg.display.flip()
-        clock.tick()
+        clock.tick(FPS)
